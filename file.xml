@@ -70,8 +70,6 @@
 -----------------------------------------------
 Blogger Template Style
 Name:     Typography Clean & Minimal Blogger Template
-Designer: alistarbot
-Url     : www.alistarbot.com
 Version : Premium Version
 ----------------------------------------------- */
 
@@ -1864,16 +1862,10 @@ body#layout .sect-left{width:28%;float:left}
 body#layout #social-footer{width:30%;float:right}
 body#layout .header-menu li.home-child,body#layout .uk-search-header,body#layout .FollowByEmail .widget-content:before{display:none}
 body#layout #unwanted{display:none!important}
-#layout:before {    content: 'This is the property of alistarbot.com';
-text-transform: uppercase;
-font-size: 20px;
-color: #999;
-margin: 0 0 20px 0;
-display: inline-block;
-font-weight: 700;
-padding: 20px;
-font-family: sans-serif;
-border: 4px double #FD856E;}
+/* Main Wrapper Bottom compacta en la pantalla Diseno (evita el bloque gigante) */
+body#layout .main-wrapper-bottom{display:block;float:none;width:100%;max-width:100%;clear:both;margin:10px 0 0;padding:0;min-height:0;height:auto}
+body#layout #main-bottom{width:100%!important;max-width:100%;float:none;clear:both;display:block;margin:0 auto;padding:8px 10px;min-height:40px;height:auto;border:1px dashed #bbb;background:#fafafa;box-sizing:border-box}
+body#layout #main-bottom .widget{margin:0 0 6px;padding:0;min-height:0}
 body#layout{width:100%}body#layout .row { width: 860px; }
 /*------Layout (end)----------*/
 ]]></b:template-skin>
@@ -2082,12 +2074,34 @@ a#slink {line-height: 87px;}
 .author-info{width:100%}
 }
 
-/* === Main Wrapper Bottom (seccion de widgets al final del Main Wrapper) === */
-.main-wrapper-bottom{width:100%;clear:both}
+/* === Main Wrapper Bottom (seccion de widgets FUERA del main wrapper) === */
+/* Nota: el bloque de reglas anterior usaba margin-top:-65px para pegar esta
+   seccion a la paginacion de la portada; ese truco quedaba dentro de
+   #main-wrapper (padding:100px 0), rompia el estilo y se superponia con los
+   comentarios. La seccion ahora vive fuera de #main-wrapper y usa flujo
+   normal con clear:both, por lo que ya no se saca &quot;por fuera&quot; con negativos. */
+.main-wrapper-bottom{width:100%;max-width:728px;clear:both;margin:0 auto;padding:0 0 40px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
 .main-wrapper-bottom:empty{display:none}
-.main-wrapper-bottom .widget{margin-top:30px}
+.main-wrapper-bottom .widget{margin:0;margin-left:auto}
 .main-wrapper-bottom .widget h2,.main-wrapper-bottom .title{font-size:14px;text-transform:uppercase;letter-spacing:2px;color:$(color.theme);margin:0 0 12px}
-body#layout #main-bottom{width:100%;clear:both;padding:15px 0;border-top:2px dashed #ccc;margin-top:15px}
+/* Contador de visitas nativo alineado a la derecha, debajo de la paginacion (sin solaparse) */
+.main-wrapper-bottom .widget .visit-count-container,.main-wrapper-bottom .visit-counter,.main-wrapper-bottom .stats-visitcount{display:inline-flex!important;align-items:center;float:none;text-align:right}
+.main-wrapper-bottom .widget::after{content:&#39;&#39;;display:block;clear:both}
+/* Vista DISEÑO: se compacta la seccion para que no se vea gigante.
+   El div contenedor y la propia seccion venian heredando/ocupando demasiado
+   alto (bloques de seccion vacios de Blogger tienen min-height grande). */
+body#layout .main-wrapper-bottom{display:block;float:none;width:100%;max-width:100%;clear:both;margin:10px 0 0;padding:0;min-height:0}
+body#layout #main-bottom{width:100%;max-width:100%;clear:both;display:block;float:none;padding:8px 10px;border:1px dashed #bbb;background:#fafafa;margin:0 auto;min-height:40px;height:auto;box-sizing:border-box}
+body#layout #main-bottom .section-title,body#layout #main-bottom h4{margin:0 0 5px;font-size:13px;line-height:1.2}
+body#layout #main-bottom .widget{margin:0 0 6px;padding:0;min-height:0}
+body#layout #main-bottom .add-widget,body#layout #main-bottom .add-page-widget,body#layout #main-bottom a.add_page_link{display:inline-block;margin:0;padding:2px 8px;font-size:11px;line-height:1.4}
+@media only screen and (max-width:920px){
+.main-wrapper-bottom{max-width:100%;width:100%}
+}
+@media only screen and (max-width:620px){
+.main-wrapper-bottom{justify-content:flex-start;padding:0 15px 25px}
+.main-wrapper-bottom .widget{margin-left:0;width:100%}
+}
 </style>
 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' type='text/javascript'/>
@@ -2254,25 +2268,29 @@ user is not using shrink to fit then we expand the header.
           <b:section class='menu' id='menu' maxwidgets='1' name='Main Menu' showaddelement='yes'>
             <b:widget id='LinkList110' locked='true' title='Menu' type='LinkList' version='1'>
               <b:widget-settings>
-                <b:widget-setting name='text-8'>Features</b:widget-setting>
-                <b:widget-setting name='link-7'>#</b:widget-setting>
-                <b:widget-setting name='link-8'>#</b:widget-setting>
-                <b:widget-setting name='link-5'>#</b:widget-setting>
-                <b:widget-setting name='link-6'>/p/about.html</b:widget-setting>
-                <b:widget-setting name='link-3'>#</b:widget-setting>
-                <b:widget-setting name='link-4'>#</b:widget-setting>
-                <b:widget-setting name='text-1'>Layouts</b:widget-setting>
-                <b:widget-setting name='text-0'>Home</b:widget-setting>
-                <b:widget-setting name='text-3'>_Minimal</b:widget-setting>
-                <b:widget-setting name='text-2'>_Typography</b:widget-setting>
-                <b:widget-setting name='text-5'>Post</b:widget-setting>
-                <b:widget-setting name='text-4'>_drop down</b:widget-setting>
-                <b:widget-setting name='text-7'>Archives</b:widget-setting>
-                <b:widget-setting name='text-6'>Pages</b:widget-setting>
+                <b:widget-setting name='text-9'>Aviso</b:widget-setting>
+                <b:widget-setting name='link-9'>/p/aviso.html</b:widget-setting>
+                <b:widget-setting name='text-8'>Archivo</b:widget-setting>
+                <b:widget-setting name='link-7'><![CDATA[/search/label/Relatos?&max-results=6]]></b:widget-setting>
+                <b:widget-setting name='link-8'>/p/archivo.html</b:widget-setting>
+                <b:widget-setting name='text-10'>Contacto</b:widget-setting>
+                <b:widget-setting name='link-5'><![CDATA[/search/label/Literatura?&max-results=6]]></b:widget-setting>
+                <b:widget-setting name='link-6'><![CDATA[/search/label/Poesía?&max-results=6]]></b:widget-setting>
+                <b:widget-setting name='link-3'><![CDATA[/search/label/andriuzha?&max-results=6]]></b:widget-setting>
+                <b:widget-setting name='link-4'><![CDATA[/search/label/Ensayo?&max-results=6]]></b:widget-setting>
+                <b:widget-setting name='text-1'>Temas</b:widget-setting>
+                <b:widget-setting name='text-0'>Inicio</b:widget-setting>
+                <b:widget-setting name='text-3'>_Cuento</b:widget-setting>
+                <b:widget-setting name='text-2'>_andriuzha</b:widget-setting>
+                <b:widget-setting name='text-5'>_Literatura</b:widget-setting>
+                <b:widget-setting name='text-4'>_Ensayo</b:widget-setting>
+                <b:widget-setting name='text-7'>_Relatos</b:widget-setting>
+                <b:widget-setting name='text-6'>_Poesía</b:widget-setting>
                 <b:widget-setting name='sorting'>NONE</b:widget-setting>
                 <b:widget-setting name='link-1'>#</b:widget-setting>
-                <b:widget-setting name='link-2'>#</b:widget-setting>
+                <b:widget-setting name='link-2'><![CDATA[/search/label/andriuzha?&max-results=6]]></b:widget-setting>
                 <b:widget-setting name='link-0'>/</b:widget-setting>
+                <b:widget-setting name='link-10'>/p/contacto.html</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
                 <div class='widget-content'>
@@ -3522,11 +3540,61 @@ user is not using shrink to fit then we expand the header.
       </b:widget>
     </b:section>
 
-<!-- Main Wrapper Bottom: seccion de widgets al final del Main Wrapper (solo visible si tiene widgets) -->
-<div class='main-wrapper-bottom'>
-  <b:section class='main-bottom' id='main-bottom' name='Main Wrapper Bottom' showaddelement='yes'/>
-</div>
       </div>
+
+<!-- Main Wrapper Bottom: seccion de widgets FUERA del main wrapper (solo visible si tiene widgets).
+     Antes estaba dentro de #main-wrapper con margin-top negativo para quedar junto a la
+     paginacion, lo que rompia el estilo y se superponia con los comentarios. -->
+<div class='main-wrapper-bottom'>
+  <b:section class='main-bottom' id='main-bottom' name='Main Wrapper Bottom' showaddelement='yes'>
+    <b:widget id='Label1' locked='false' title='Etiquetas' type='Label'>
+      <b:widget-settings>
+        <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+        <b:widget-setting name='display'>CLOUD</b:widget-setting>
+        <b:widget-setting name='selectedLabelsList'/>
+        <b:widget-setting name='showType'>ALL</b:widget-setting>
+        <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+    </b:widget>
+  </b:section>
+</div>
       <div class='sidebar-wrapper'>
         <b:section class='sidebar' id='sidebar' name='Sidebar Right A' preferred='yes'>
           <b:widget id='HTML12' locked='false' title='' type='HTML'>
@@ -3666,17 +3734,13 @@ head.appendChild(script);
 <b:section class='social-footer' id='social-footer' maxwidgets='1' name='Social Footer' showaddelement='yes'>
    <b:widget id='LinkList20' locked='true' title='Social Media Icons 2' type='LinkList' version='1'>
      <b:widget-settings>
-       <b:widget-setting name='link-3'>http://twitter.com</b:widget-setting>
        <b:widget-setting name='sorting'>NONE</b:widget-setting>
-       <b:widget-setting name='link-4'>http://facebook.com</b:widget-setting>
-       <b:widget-setting name='text-1'>youtube</b:widget-setting>
-       <b:widget-setting name='link-1'>http://youtube.com</b:widget-setting>
-       <b:widget-setting name='text-0'>github</b:widget-setting>
-       <b:widget-setting name='link-2'>http://instagram.com</b:widget-setting>
-       <b:widget-setting name='text-3'>twitter</b:widget-setting>
-       <b:widget-setting name='link-0'>https://github.com</b:widget-setting>
-       <b:widget-setting name='text-2'>instagram</b:widget-setting>
-       <b:widget-setting name='text-4'>facebook</b:widget-setting>
+       <b:widget-setting name='text-1'>github</b:widget-setting>
+       <b:widget-setting name='link-1'>https://github.com/andriuzha</b:widget-setting>
+       <b:widget-setting name='text-0'>instagram</b:widget-setting>
+       <b:widget-setting name='link-2'>https://linkedin.com/in/andriuzha</b:widget-setting>
+       <b:widget-setting name='link-0'>http://instagram.com/andriuzha</b:widget-setting>
+       <b:widget-setting name='text-2'>linkedin</b:widget-setting>
      </b:widget-settings>
      <b:includable id='main'>
             <div class='widget-content'>
