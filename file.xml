@@ -928,19 +928,13 @@ span.post-date-year {
 .main .widget{margin:0}
 .main .Blog{border-bottom-width:0}
 /* === Share buttons: 4 clean square icon-only buttons (mobile friendly) === */
-.share-art{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:40px 0;padding:15px 0;border-top:1px dotted #f0f0f0;border-bottom:1px dotted #f0f0f0;overflow:hidden}
-.share-art a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;min-width:44px;padding:0;margin:0;border-radius:4px;color:#fff!important;text-decoration:none;font-size:18px;line-height:1;transition:background-color .2s ease,transform .2s ease}
+.share-art{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:40px 0;padding:0;border-top:1px dotted #f0f0f0;border-bottom:1px dotted #f0f0f0;overflow:hidden}
+.share-art a{display:inline-flex;align-items:center;justify-content:center;width:52px;height:28px;min-width:28px;padding:0;margin:0;border-radius:0px;background-color:#000;color:#fff!important;text-decoration:none;font-size:18px;line-height:1;transition:background-color .2s ease,transform .2s ease}
 .share-art a span{display:none}
 .share-art a i.fa{margin:0;font-size:18px}
-.share-art a:hover{color:#fff;transform:translateY(-2px)}
-.share-art .facebook{background-color:#3b5998}
-.share-art .facebook:hover{background-color:#223a70}
-.share-art .twitter{background-color:#1da1f2}
-.share-art .twitter:hover{background-color:#0c85d0}
-.share-art .linkedin{background-color:#0077b5}
-.share-art .linkedin:hover{background-color:#005582}
-.share-art .whatsapp{background-color:#25d366}
-.share-art .whatsapp:hover{background-color:#128c7e}
+.share-art a:hover{color:#fff;transform:translateY(-4px);background-color:$(color.theme)}
+.share-art .facebook,.share-art .twitter,.share-art .linkedin,.share-art .whatsapp{background-color:#000}
+.share-art .facebook:hover,.share-art .twitter:hover,.share-art .linkedin:hover,.share-art .whatsapp:hover{background-color:$(color.theme)}
 /* === Related posts: clean vertical list (titles + subtle separators only, no thumbnails) === */
 #related-posts{margin-bottom:10px}
 .related-headline{margin-bottom:20px;color:#333;font-size:24px;font-family:'Domine',serif;font-weight:700;text-align:left}
@@ -3151,7 +3145,7 @@ user is not using shrink to fit then we expand the header.
                   <a class='linkedin' expr:href='&quot;https://www.linkedin.com/sharing/share-offsite/?url=&quot; + data:post.url' expr:title='&quot;Compartir en LinkedIn&quot;' onclick='window.open(this.href, &apos;shareLI&apos;, &apos;width=600,height=400,left=24,top=24,scrollbars,resizable&apos;); return false;' rel='nofollow noopener' target='_blank'><i class='fa fa-linkedin'/></a>
                   <a class='whatsapp' expr:href='&quot;https://api.whatsapp.com/send?text=&quot; + data:post.title + &quot; &quot; + data:post.url' expr:title='&quot;Compartir en WhatsApp&quot;' rel='nofollow noopener' target='_blank'><i class='fa fa-whatsapp'/></a>
                 </div>
-
+<!-- 
                 <b:if cond='data:blog.pageType == &quot;item&quot;'>
                   <div class='author-box' itemscope='' itemtype='http://schema.org/Person'>
                     <div class='author-avatar'>
@@ -3164,7 +3158,7 @@ user is not using shrink to fit then we expand the header.
                     </div>
                   </div>
                 </b:if>
-
+-->
                 <div style='clear:both'/>  
 
                 <div id='related-posts'>
