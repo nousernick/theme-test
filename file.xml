@@ -11,7 +11,7 @@
 
 
 <link href='https://fonts.googleapis.com/css?family=Domine:400,700|Josefin+Sans:300,300i,400,400i,600,600i,700,700i' rel='stylesheet'/>
-    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet'/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' rel='stylesheet'/>
     <b:include data='blog' name='all-head-content'/>
     <title>
 		<b:if cond='data:blog.pageType == &quot;index&quot;'>
@@ -201,7 +201,8 @@ display:none;
 .tm-head #social-top ul li a:hover{color:$(color.theme)}
 #social-top .facebook:before{content:"\f09a"}
 #social-top .bloglovin:before{content:"\f004"}
-#social-top .twitter:before{content:"\f099"}
+#social-top .twitter:before{content:"";display:inline-block;width:1em;height:1em;background-color:#fff;-webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.7 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>") no-repeat center/contain;mask:url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.7 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>") no-repeat center/contain}
+#social-top .twitter:hover:before{background-color:$(color.theme)}
 #social-top .gplus:before{content:"\f0d5"}
 #social-top .rss:before{content:"\f09e"}
 #social-top .vimeo:before{content:"\f27d"}
@@ -927,11 +928,23 @@ span.post-date-year {
 .label-head a:hover{background-color:$(color.theme)}
 .main .widget{margin:0}
 .main .Blog{border-bottom-width:0}
+/* === Font Awesome 6 compat: legacy fa-* class names -> mapped glyphs === */
+.fa-twitter:before{content:"\f099";font-family:"Font Awesome 6 Brands";font-weight:400}
+.fa-facebook:before{content:"\f09a";font-family:"Font Awesome 6 Brands";font-weight:400}
+.fa-facebook-f:before,.fa-facebook-square:before{font-family:"Font Awesome 6 Brands";font-weight:400}
+.fa-linkedin:before{content:"\f08c";font-family:"Font Awesome 6 Brands";font-weight:400}
+.fa-whatsapp:before{font-family:"Font Awesome 6 Brands";font-weight:400}
+.fa-google-plus:before{content:"\f0d5";font-family:"Font Awesome 6 Brands";font-weight:400}
+.fa-rss:before{font-family:"Font Awesome 6 Free";font-weight:900}
+.fa-heart:before,.fa-user-circle:before,.fa-envelope:before,.fa-shopping-cart:before,.fa-book:before,.fa-star:before,.fa-clock-o:before,.fa-comment:before,.fa-share:before,.fa-search:before,.fa-bars:before,.fa-times:before,.fa-chevron-down:before,.fa-chevron-right:before,.fa-angle-right:before,.fa-check:before,.fa-exclamation-triangle:before,.fa-info-circle:before,.fa-home:before,.fa-tag:before,.fa-tags:before,.fa-folder:before,.fa-calendar:before,.fa-edit:before,.fa-trash:before,.fa-plus:before,.fa-minus:before,.fa-cog:before,.fa-play:before,.fa-pause:before,.fa-close:before{font-family:"Font Awesome 6 Free";font-weight:900}
+i.fa,i.fas,i.far,i.fab,i.fa-brands{display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}
 /* === Share buttons: 4 clean square icon-only buttons (mobile friendly) === */
 .share-art{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:40px 0;padding:0;border-top:1px dotted #f0f0f0;border-bottom:1px dotted #f0f0f0;overflow:hidden}
 .share-art a{display:inline-flex;align-items:center;justify-content:center;width:52px;height:28px;min-width:28px;padding:0;margin:0;border-radius:0px;background-color:#000;color:#fff!important;text-decoration:none;font-size:18px;line-height:1;transition:background-color .2s ease,transform .2s ease}
 .share-art a span{display:none}
-.share-art a i.fa{margin:0;font-size:18px}
+.share-art .share-label{display:inline-block;font-size:13px;height:20px;line-height:19px;background-color:#f0f0f0;color:#222;padding:5px 11px;margin-right:3px}
+.share-art a i.fa,.share-art a i.fas,.share-art a i.fab,.share-art a i.fa-brands{margin:0;font-size:18px}
+.share-art a .svg-x{width:14px;height:14px;fill:currentColor;display:block}
 .share-art a:hover{color:#fff;transform:translateY(-4px);background-color:$(color.theme)}
 .share-art .facebook,.share-art .twitter,.share-art .linkedin,.share-art .whatsapp{background-color:#000}
 .share-art .facebook:hover,.share-art .twitter:hover,.share-art .linkedin:hover,.share-art .whatsapp:hover{background-color:$(color.theme)}
@@ -1355,7 +1368,8 @@ position: relative;
 .footer-wrapper #social-footer ul li a:before{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .footer-wrapper a:active,.footer-wrapper #social-footer ul li a:active{color:$(color.theme)}
 #social-footer .facebook:before{content:"\f230"}
-#social-footer .twitter:before{content:"\f099"}
+.footer-wrapper #social-footer .twitter:before{content:"";display:inline-block;width:1em;height:1em;background-color:#737373;-webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.7 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>") no-repeat center/contain;mask:url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.7 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>") no-repeat center/contain}
+.footer-wrapper #social-footer .twitter:hover:before{background-color:$(color.theme)}
 #social-footer .gplus:before{content:"\f0d5"}
 #social-footer .rss:before{content:"\f09e"}
 #social-footer .vimeo:before{content:"\f27d"}
@@ -1454,7 +1468,7 @@ background: rgba(0,0,0,.1);
 }
 
 .social-media-widget ul li a.twitter{
-	background-color: #00aced;
+	background-color: #000;
 	color:#fff;
 }
 
@@ -3140,10 +3154,11 @@ user is not using shrink to fit then we expand the header.
                 </div>
 
                 <div class='share-art'>
-                  <a class='facebook' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.url' expr:title='&quot;Compartir en Facebook&quot;' onclick='window.open(this.href, &apos;shareFB&apos;, &apos;width=600,height=400,left=24,top=24,scrollbars,resizable&apos;); return false;' rel='nofollow noopener' target='_blank'><i class='fa fa-facebook-f'/></a>
-                  <a class='twitter' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.url + &quot;&amp;text=&quot; + data:post.title' expr:title='&quot;Compartir en Twitter&quot;' onclick='window.open(this.href, &apos;shareTW&apos;, &apos;width=600,height=400,left=24,top=24,scrollbars,resizable&apos;); return false;' rel='nofollow noopener' target='_blank'><i class='fa fa-twitter'/></a>
-                  <a class='linkedin' expr:href='&quot;https://www.linkedin.com/sharing/share-offsite/?url=&quot; + data:post.url' expr:title='&quot;Compartir en LinkedIn&quot;' onclick='window.open(this.href, &apos;shareLI&apos;, &apos;width=600,height=400,left=24,top=24,scrollbars,resizable&apos;); return false;' rel='nofollow noopener' target='_blank'><i class='fa fa-linkedin'/></a>
-                  <a class='whatsapp' expr:href='&quot;https://api.whatsapp.com/send?text=&quot; + data:post.title + &quot; &quot; + data:post.url' expr:title='&quot;Compartir en WhatsApp&quot;' rel='nofollow noopener' target='_blank'><i class='fa fa-whatsapp'/></a>
+                  <span class='share-label'>Comparte en:</span>
+                  <a class='facebook' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.url' expr:title='&quot;Compartir en Facebook&quot;' onclick='window.open(this.href, &apos;shareFB&apos;, &apos;width=600,height=400,left=24,top=24,scrollbars,resizable&apos;); return false;' rel='nofollow noopener' target='_blank'><i class='fa-brands fa-facebook-f'/></a>
+                  <a class='twitter x' expr:href='&quot;https://x.com/intent/post?url=&quot; + data:post.url + &quot;&amp;text=&quot; + data:post.title' expr:title='&quot;Compartir en X&quot;' onclick='window.open(this.href, &apos;shareX&apos;, &apos;width=600,height=400,left=24,top=24,scrollbars,resizable&apos;); return false;' rel='nofollow noopener' target='_blank'><svg aria-hidden='true' class='svg-x' role='img' viewbox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'><path d='M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.7 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z'/></svg></a>
+                  <a class='linkedin' expr:href='&quot;https://www.linkedin.com/sharing/share-offsite/?url=&quot; + data:post.url' expr:title='&quot;Compartir en LinkedIn&quot;' onclick='window.open(this.href, &apos;shareLI&apos;, &apos;width=600,height=400,left=24,top=24,scrollbars,resizable&apos;); return false;' rel='nofollow noopener' target='_blank'><i class='fa-brands fa-linkedin-in'/></a>
+                  <a class='whatsapp' expr:href='&quot;https://api.whatsapp.com/send?text=&quot; + data:post.title + &quot; &quot; + data:post.url' expr:title='&quot;Compartir en WhatsApp&quot;' rel='nofollow noopener' target='_blank'><i class='fa-brands fa-whatsapp'/></a>
                 </div>
 <!-- 
                 <b:if cond='data:blog.pageType == &quot;item&quot;'>
@@ -3757,7 +3772,7 @@ head.appendChild(script);
 $(function() {
     $('.widget.LinkList a[href*="behance.net"] i').addClass("fa fa-behance");
     $('.widget.LinkList a[href*="facebook.com"] i').addClass("fa fa-facebook");
-    $('.widget.LinkList a[href*="twitter.com"] i').addClass("fa fa-twitter");
+    $('.widget.LinkList a[href*="twitter.com"] i, .widget.LinkList a[href*="x.com"] i').addClass("fa-brands fa-x-twitter");
     $('.widget.LinkList a[href*="bloglovin.com"] i').addClass("fa fa-heart");
     $('.widget.LinkList a[href*="dribbble.com"] i').addClass("fa fa-dribbble");
     $('.widget.LinkList a[href*="flickr.com"] i').addClass("fa fa-flickr");
@@ -3787,7 +3802,7 @@ $(function() {
     $('.widget.LinkList a[href*="etsy.com"] i').addClass("fa fa-shopping-cart");
     $('.widget.LinkList a[href*="behance.net"]').addClass("behance");
     $('.widget.LinkList a[href*="facebook.com"]').addClass("facebook");
-    $('.widget.LinkList a[href*="twitter.com"]').addClass("twitter");
+    $('.widget.LinkList a[href*="twitter.com"], .widget.LinkList a[href*="x.com"]').addClass("twitter x");
     $('.widget.LinkList a[href*="bloglovin.com"]').addClass("bloglovin");
     $('.widget.LinkList a[href*="dribbble.com"]').addClass("dribbble");
     $('.widget.LinkList a[href*="flickr.com"]').addClass("flickr");
