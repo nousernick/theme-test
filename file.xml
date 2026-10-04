@@ -17,15 +17,15 @@
     </noscript>
     <b:include data='blog' name='all-head-content'/>
     <title>
-		<b:if cond='data:blog.pageType == &quot;index&quot;'>
-			<data:blog.pageTitle/>
-		<b:else/>
-			<b:if cond='data:blog.pageType != &quot;error_page&quot;'>
-				<data:blog.pageName/> - <data:blog.title/>
-			<b:else/>
-				ERROR 404 - <data:blog.title/> 
-			</b:if>
-		</b:if>
+        <b:if cond='data:blog.pageType == &quot;index&quot;'>
+            <data:blog.pageTitle/>
+        <b:else/>
+            <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+                <data:blog.pageName/> - <data:blog.title/>
+            <b:else/>
+                ERROR 404 - <data:blog.title/> 
+            </b:if>
+        </b:if>
     </title>
     <!-- Description and Keywords (start) -->
     <b:if cond='data:blog.pageType == &quot;index&quot;'>
@@ -69,7 +69,7 @@
     <meta content='@username' name='twitter:site'/>
     <meta content='@username' name='twitter:creator'/>   
 
-<b:skin><![CDATA[	/*
+<b:skin><![CDATA[   /*
 -----------------------------------------------
 Blogger Template Style
 Name:     Typography Clean & Minimal Blogger Template
@@ -301,8 +301,8 @@ display:none;
     letter-spacing: 0px;
 font:$(navbar.text.font);
 
-	
-	color:$(navbar.text.color); height: 80px;    font-weight: 700;
+    
+    color:$(navbar.text.color); height: 80px;    font-weight: 700;
     line-height: 80px;  -webkit-transition: all .1s ease-in-out;
     -moz-transition: all .1s ease-in-out;
     -ms-transition: all .1s ease-in-out;
@@ -750,7 +750,7 @@ border-bottom: 1px solid;
 .post-date-day{
     color: $(color.theme);
     display: block;
-    font-size: 60px;
+    font-size: 58px;
     line-height: 50px;
     font-family: 'Domine';
     font-weight: 400;
@@ -1134,15 +1134,15 @@ li.postz img {
 }
 
 ul.roma-widget li {
-	position: relative;
-	overflow: hidden;
-	background-size: cover!important;
-	background-position: center center!important;
-	-webkit-transition: all 0.35s ease-in-out;
-	-moz-transition: all 0.35s ease-in-out;
-	-ms-transition: all 0.35s ease-in-out;
-	-o-transition: all 0.35s ease-in-out;
-	transition: all 0.35s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    background-size: cover!important;
+    background-position: center center!important;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 padding:0px;
 }
 
@@ -1156,30 +1156,30 @@ div#pic1 {
 }
 
 ul.roma-widget li~li {
-	border-top:1px solid #eee;
+    border-top:1px solid #eee;
 }
 
 ul.roma-widget li a {
-	position: relative;
-	display: block;
-	padding:20px;
-	text-decoration: none;
-	background-color: rgba(255, 255, 255, 1);
-	-webkit-transition: all 0.35s ease-in-out;
-	-moz-transition: all 0.35s ease-in-out;
-	-ms-transition: all 0.35s ease-in-out;
-	-o-transition: all 0.35s ease-in-out;
-	transition: all 0.35s ease-in-out;
+    position: relative;
+    display: block;
+    padding:20px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 1);
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
 
 
 
 ul.roma-widget li a .post-title h6 {
-	position: relative;
-	font-size: 15px;
+    position: relative;
+    font-size: 15px;
     line-height: 22px;
-	color: #000;
-	-webkit-transition: all 0.35s ease-in-out;
+    color: #000;
+    -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -ms-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
@@ -1199,7 +1199,7 @@ ul.roma-widget li a .post-title h6 {
 
 
 ul.roma-widget .post-meta {
-	margin:0;
+    margin:0;
     padding:0;
     border:0;
 }
@@ -1211,23 +1211,23 @@ ul.roma-widget li .post-meta .post-date:before {
 
 
 ul.roma-widget li a .post-date {
-	position: relative;
-	z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 ul.roma-widget li a span {
-	display: none;
+    display: none;
 }
 
 
 
 ul.roma-widget li:first-child a {
-	padding:0;
-	background-color: #000;
+    padding:0;
+    background-color: #000;
 }
 
 ul.roma-widget li:first-child a .post-image {
-	opacity: 0.6;
+    opacity: 0.6;
 }
 
 ul.roma-widget li:first-child a .post-image {
@@ -1235,37 +1235,37 @@ ul.roma-widget li:first-child a .post-image {
 }
 
 ul.roma-widget li:first-child .post-title {
-	position: absolute;
-	bottom: 35px;
+    position: absolute;
+    bottom: 35px;
 }
 
 ul.roma-widget li:first-child .post-title h6 {
-	font-size: 15px;
+    font-size: 15px;
     line-height: 21px;
-	color: #fff;
+    color: #fff;
 }
 
 
 ul.roma-widget li:first-child  .post-meta {
-	position: absolute;
+    position: absolute;
 
-	padding: 0 0 0 25px;
+    padding: 0 0 0 25px;
 }
 
 ul.roma-widget li a:hover {
-	background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 ul.roma-widget li a:hover .post-title h6 {
-	color: #fff;
+    color: #fff;
 }
 
 ul.roma-widget li:first-child a:hover {
-	background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 ul.roma-widget li:first-child a .post-title h6 {
-	padding: 0 25px;
+    padding: 0 25px;
 }
 
 
@@ -1420,19 +1420,19 @@ div#hague_widget_social-2 li {
 }
 
 .social-media-widget ul li~li {
-	border-top: 5px solid #fff;
+    border-top: 5px solid #fff;
 }
 
 .social-media-widget ul li a{
-	display: block;
-	font-size: 9px;
+    display: block;
+    font-size: 9px;
     font-family: 'Montserrat', sans-serif;
-	font-weight: 500;
-	letter-spacing: 0.3px;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #000;
-	-webkit-transition: all 0.35s ease-in-out;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -ms-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
@@ -1440,7 +1440,7 @@ div#hague_widget_social-2 li {
 }
 
 .social-media-widget ul li a i{
-	position: relative;
+    position: relative;
     display: inline-block;
     font-size: 12px;
     width: 40px;
@@ -1457,7 +1457,7 @@ background: rgba(0,0,0,.1);
 
 
 .social-media-widget ul li a span{
-	display: inline-block;
+    display: inline-block;
     float: right;
     font-size: 9px;
     text-transform: uppercase;
@@ -1466,74 +1466,74 @@ background: rgba(0,0,0,.1);
 }
 
 .social-media-widget ul li a.facebook{
-	background-color: #3b5998;
-	color:#fff;
+    background-color: #3b5998;
+    color:#fff;
 }
 
 .social-media-widget ul li a.twitter{
-	background-color: #000;
-	color:#fff;
+    background-color: #000;
+    color:#fff;
 }
 
 .social-media-widget ul li a.dribble{
-	background-color: #ed689b;
-	color:#fff;
+    background-color: #ed689b;
+    color:#fff;
 }
 
 .social-media-widget ul li a.linkedin{
-	background-color: #0077b5;
-	color:#fff;
+    background-color: #0077b5;
+    color:#fff;
 }
 
 .social-media-widget ul li a.flickr{
-	background-color: #ff0084;
-	color:#fff;
+    background-color: #ff0084;
+    color:#fff;
 }
 
 .social-media-widget ul li a.tumblr{
-	background-color: #3d5a70;
-	color:#fff;
+    background-color: #3d5a70;
+    color:#fff;
 }
 
 .social-media-widget ul li a.vimeo{
-	background-color: #1ab7ea;
-	color:#fff;
+    background-color: #1ab7ea;
+    color:#fff;
 }
 
 .social-media-widget ul li a.youtube {
-	background-color: #dd1a2a;
-	color:#fff;
+    background-color: #dd1a2a;
+    color:#fff;
 }
 
 .social-media-widget ul li a.instagram{
-	background-color: #125688;
-	color:#fff;
+    background-color: #125688;
+    color:#fff;
 }
 
 .social-media-widget ul li a.google-plus{
-	background-color: #dd4b39;
-	color:#fff;
+    background-color: #dd4b39;
+    color:#fff;
 }
 
 .social-media-widget ul li a.foursquare,
 .sidebar-social ul li a.foursquare {
-	background-color: #f94877;
-	color:#fff;
+    background-color: #f94877;
+    color:#fff;
 }
 
 .social-media-widget ul li a.pinterest {
-	background-color: #cb2027;
-	color:#fff;
+    background-color: #cb2027;
+    color:#fff;
 }
 
 .social-media-widget ul li a.deviantart{
-	background-color: #04cc47;
-	color:#fff;
+    background-color: #04cc47;
+    color:#fff;
 }
 
 .social-media-widget ul li a.behance{
-	background-color: #005cff;
-	color:#fff;
+    background-color: #005cff;
+    color:#fff;
 }
 
 .social-media-widget ul li a.facebook:hover i,
@@ -1550,7 +1550,7 @@ background: rgba(0,0,0,.1);
 .social-media-widget ul li a.pinterest:hover i,
 .social-media-widget ul li a.deviantart:hover i,
 .social-media-widget ul li a.behance:hover i{
-	border-color: #fff;
+    border-color: #fff;
 }
 .cmm-tabs.simplyTab {
 
@@ -1729,7 +1729,7 @@ a.mega_post-image {
 }
 
 .mega_post-image:hover {
-	-webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(1);
     filter: grayscale(1);
 }
 
@@ -3109,9 +3109,9 @@ user is not using shrink to fit then we expand the header.
                           
                  
                    
-	<div class='resumo'><div expr:id='&quot;summary&quot; + data:post.id' style='display:none;'>
-							<data:post.body/>
-						</div></div>
+    <div class='resumo'><div expr:id='&quot;summary&quot; + data:post.id' style='display:none;'>
+                            <data:post.body/>
+                        </div></div>
                     <script type='text/javascript'>buildSummary(&quot;summary<data:post.id/>&quot;)</script>
 
 
